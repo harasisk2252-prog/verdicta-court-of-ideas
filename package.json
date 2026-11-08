@@ -1,0 +1,16 @@
+{
+  "name": "verdicta-court-of-ideas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A cinematic AI courtroom for the ideas that deserve a fair hearing.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check public/app.js && node --check netlify/functions/api.mjs",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

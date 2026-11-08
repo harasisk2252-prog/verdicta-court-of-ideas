@@ -1,0 +1,9 @@
+# Guided demo with server-side debate APIs. Shared storage is not configured.
+[build]
+  publish = "public"
+  command = "npm run check"
+[build.environment]
+  NODE_VERSION = "22"
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

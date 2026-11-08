@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720" role="img" aria-label="Atmospheric illustration of a classical courtroom">
+<defs>
+ <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5a4a3c"/><stop offset=".50" stop-color="#98735b"/><stop offset="1" stop-color="#39251d"/></linearGradient>
+ <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#956344"/><stop offset=".42" stop-color="#5b3828"/><stop offset="1" stop-color="#261b19"/></linearGradient>
+ <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8d4" stop-opacity=".9"/><stop offset="1" stop-color="#ffc786" stop-opacity=".08"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#fff2c1" stop-opacity=".50"/><stop offset=".5" stop-color="#e9ad63" stop-opacity=".18"/><stop offset="1" stop-color="#160f12" stop-opacity="0"/></radialGradient>
+ <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#3e2a25"/><stop offset="1" stop-color="#181414"/></linearGradient>
+ <linearGradient id="window" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e8d9b6"/><stop offset=".7" stop-color="#b99b77"/><stop offset="1" stop-color="#735b4d"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="35"/></filter>
+ <filter id="soft"><feGaussianBlur stdDeviation="6"/></filter>
+ <pattern id="line" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M0 0H30" stroke="#ffe7be" opacity=".035"/></pattern>
+</defs>
+<rect width="1400" height="720" fill="url(#wall)"/>
+<rect width="1400" height="520" fill="url(#line)"/>
+<ellipse cx="700" cy="255" rx="580" ry="400" fill="url(#halo)"/>
+<path d="M0 0H1400V535H0Z" fill="#1d1513" opacity=".13"/>
+<!-- Coffered ceiling -->
+<path d="M0 8H1400V72H0Z" fill="#3b2921"/><path d="M0 22H1400M0 53H1400" stroke="#d19e6a" stroke-opacity=".4" stroke-width="4"/>
+<g stroke="#3f2922" stroke-width="17" opacity=".78"><path d="M165 0V99M390 0V80M1010 0V80M1235 0V99"/></g>
+<!-- Arched architectural bays -->
+<g fill="#543b30" stroke="#b8916b" stroke-width="11" stroke-opacity=".65">
+<path d="M29 490V221Q29 83 145 83Q261 83 261 221V490Z"/>
+<path d="M290 482V215Q290 70 407 70Q524 70 524 215V482Z"/>
+<path d="M876 482V215Q876 70 993 70Q1110 70 1110 215V482Z"/>
+<path d="M1139 490V221Q1139 83 1255 83Q1371 83 1371 221V490Z"/>
+</g>
+<!-- glowing windows -->
+<g>
+<path d="M62 446V220Q62 112 145 112Q228 112 228 220V446Z" fill="url(#window)" opacity=".90"/>
+<path d="M323 445V218Q323 103 407 103Q491 103 491 218V445Z" fill="url(#window)" opacity=".70"/>
+<path d="M909 445V218Q909 103 993 103Q1077 103 1077 218V445Z" fill="url(#window)" opacity=".70"/>
+<path d="M1172 446V220Q1172 112 1255 112Q1338 112 1338 220V446Z" fill="url(#window)" opacity=".9"/>
+</g>
+<!-- window muntins -->
+<g stroke="#7f614b" stroke-width="7" opacity=".75">
+<path d="M145 115V445M407 105V445M993 105V445M1255 115V445"/>
+<path d="M60 300H231M320 300H494M906 300H1079M1169 300H1341"/>
+</g>
+<g fill="#ffe1a6" opacity=".18" filter="url(#blur)"><path d="M60 180H230V470H60Z"/><path d="M1169 180H1341V470H1169Z"/></g>
+<!-- central judge's chamber -->
+<path d="M538 481V208Q538 82 700 82Q862 82 862 208V481Z" fill="#4a3029" stroke="#b88a61" stroke-width="14"/>
+<path d="M566 464V213Q566 115 700 115Q834 115 834 213V464Z" fill="#2e2422" stroke="#9c7150" stroke-width="3"/>
+<path d="M585 454V226Q585 136 700 136Q815 136 815 226V454Z" fill="#6d4e3b" opacity=".7"/>
+<g stroke="#d5a76e" stroke-opacity=".4" fill="none"><path d="M610 449V224Q610 155 700 155Q790 155 790 224V449Z"/><path d="M645 447V226M755 447V226"/></g>
+<!-- beams / columns -->
+<g fill="#c29870" opacity=".48"><rect x="14" y="140" width="18" height="390"/><rect x="274" y="135" width="19" height="390"/><rect x="520" y="127" width="20" height="390"/><rect x="860" y="127" width="20" height="390"/><rect x="1106" y="135" width="19" height="390"/><rect x="1368" y="140" width="18" height="390"/></g>
+<g fill="#38251f"><rect x="0" y="479" width="1400" height="21"/><rect y="500" width="1400" height="220" fill="url(#floor)"/></g>
+<g stroke="#c18b5f" stroke-width="2" opacity=".20"><path d="M0 624H1400M0 676H1400M600 501L380 720M800 501L1020 720M400 501L100 720M1000 501L1300 720"/></g>
+<!-- atmospheric sunlight shafts -->
+<path d="M74 230L480 590L260 588L60 440Z" fill="url(#sun)" opacity=".20"/><path d="M1320 230L920 590L1130 588L1340 435Z" fill="url(#sun)" opacity=".2"/>
+<!-- rosette -->
+<circle cx="700" cy="91" r="28" fill="#9d7854" stroke="#d1a46a" stroke-width="3"/><path d="M700 74V108M684 91H716M689 80L711 102M711 80L689 102" stroke="#f3d399" stroke-width="3"/>
+<!-- judge's bench -->
+<path d="M548 426H852L894 480H506Z" fill="#241b19"/>
+<path d="M526 453H874V568H526Z" fill="url(#wood)" stroke="#ad7850" stroke-width="5"/>
+<path d="M543 474H857V555H543Z" fill="none" stroke="#d2a06f" stroke-opacity=".55" stroke-width="3"/>
+<g stroke="#2b1c19" stroke-width="5"><path d="M622 476V555M778 476V555"/></g>
+<circle cx="700" cy="514" r="27" fill="#a77d56" stroke="#dfbb83" stroke-width="4"/><path d="M700 493V534M679 514H721" stroke="#efd5a4" stroke-width="4"/>
+<!-- side tables / podiums -->
+<g fill="url(#wood)" stroke="#b58055" stroke-width="5">
+<path d="M63 552L305 532L351 574L92 598Z"/><path d="M95 585L339 570L334 708L108 708Z"/>
+<path d="M1095 532L1337 552L1308 598L1049 574Z"/><path d="M1061 570L1305 585L1292 708L1066 708Z"/>
+</g>
+<g fill="none" stroke="#c79c6d" stroke-width="3" opacity=".6"><path d="M124 611L317 597V693H126Z"/><path d="M1083 597L1276 611V693H1083Z"/></g>
+<path d="M0 701H1400V720H0Z" fill="#100e0f" opacity=".7"/>
+<!-- corners vignette -->
+<rect width="1400" height="720" fill="none" stroke="#090909" stroke-width="80" opacity=".13" filter="url(#blur)"/>
+</svg>

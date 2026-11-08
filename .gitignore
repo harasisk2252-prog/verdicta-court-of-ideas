@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+.netlify/
+*.log
+node_modules/
+data/gallery.json
+data/rooms.json
+.DS_Store
