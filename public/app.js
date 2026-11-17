@@ -270,8 +270,13 @@
 
   $$('.dialog-backdrop').forEach(backdrop=>backdrop.addEventListener('click',e=>{if(e.target===backdrop)closeDialog('#'+backdrop.id);}));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){$$('.dialog-backdrop').forEach(n=>n.hidden=true);clearInterval(state.roomTimer);stopVoice();}});
-  const observer='IntersectionObserver' in window?new IntersectionObserver(items=>{items.forEach(item=>{if(item.isIntersecting){item.target.classList.add('is-visible');observer.unobserve(item.target);}})},{threshold:.12}):null;
-  $$('.manifesto h2,.manifesto-side,.principles>div,.mode-card,.feature-card,.gallery-heading,.closing-section h2').forEach(n=>{if(observer){n.classList.add('reveal');observer.observe(n);}});
+  let observer=null;
+  if('IntersectionObserver' in window){
+    observer=new IntersectionObserver(items=>{items.forEach(item=>{if(item.isIntersecting&&item.target instanceof Element){item.target.classList.add('is-visible');observer.unobserve(item.target);}})},{threshold:.12});
+  }
+  $$('.manifesto h2,.manifesto-side,.principles>div,.mode-card,.feature-card,.gallery-heading,.closing-section h2').forEach(n=>{
+    if(observer&&n instanceof Element){try{n.classList.add('reveal');observer.observe(n);}catch{n.classList.add('is-visible');}}
+  });
   async function boot(){await Promise.all([loadStatus(),loadGallery()]);const match=location.hash.match(/^#room=([A-Fa-f0-9]{8})$/);if(match){setMode('human-human');await enterRoom(match[1]);} }
   boot();
 })();
